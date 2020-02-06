@@ -1,7 +1,9 @@
 <template>
-  <div id="app">
+  <div id="app" class="app">
     <header-menu/>
-    <router-view/>
+    <div class="app__container">
+      <router-view/>
+    </div>
   </div>
 </template>
 
@@ -18,7 +20,9 @@ export default {
   @import '~@/assets/scss/global';
   @import '~@/assets/scss/typo';
 
-  #app {
-
+  .app {
+    &__container {
+      padding: $gap 0;
+    }
   }
 </style>
