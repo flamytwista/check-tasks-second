@@ -1,6 +1,12 @@
 <template>
   <div class="note-card">
     <h2>Заголовок карточки</h2>
+    <ul>
+      <li>первое</li>
+      <li>второе</li>
+      <li>третье</li>
+      <li>...</li>
+    </ul>
   </div>
 </template>
 
