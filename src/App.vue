@@ -1,13 +1,19 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <container class="nav">
       <router-link to="/">Home</router-link>
       &nbsp;
       <router-link to="/about">About</router-link>
-    </div>
+    </container>
     <router-view/>
   </div>
 </template>
+
+<script>
+
+export default {
+}
+</script>
 
 <style lang="scss">
   @import "~@/assets/scss/variables";
