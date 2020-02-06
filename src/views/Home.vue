@@ -11,6 +11,6 @@ import NotesWrapper from '@/components/NotesWrapper.vue'
 
 export default {
   name: 'home',
-  components: { NotesWrapper }
+  components: { NotesWrapper },
 }
 </script>
