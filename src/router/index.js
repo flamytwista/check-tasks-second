@@ -1,20 +1,17 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Home from '@/views/Home.vue'
+import LibraryRoutes from '@/my-own-library/router/index.js'
 
 Vue.use(VueRouter)
 
 const routes = [
+  ...LibraryRoutes,
   {
     path: '/',
     name: 'home',
     component: Home
   },
-  {
-    path: '/components',
-    name: 'components',
-    component: () => import('../my-own-library/views/Components.vue')
-  }
 ]
 
 const router = new VueRouter({
