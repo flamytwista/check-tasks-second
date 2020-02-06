@@ -1,6 +1,7 @@
 // Цвета
 $clrFont:       #000000;
 $clrFontGray:   #939393;
+$clrLight:      #D7E2EC;
 
 $clrMain:       #4A76A8;              // Большой фон
 $clrAccent:     #5181B8;              // Кнопки, тонкие акцентированные линии
@@ -29,10 +30,11 @@ $bpLg:  1280px;
 $bpXl:  1600px;
 
 // Время анимаций
+$timeShort: 200ms;
 $timeMedium: 1000ms;
 
 // Типовые размеры для типовой верстки
 $gap: 16px;
 $border-radius: 4px;
 $scrollbarWidth: 6px; // совпадает с размером из FireFox
-$headerHeight: $gap * 4;
+$headerHeight: $gap * 3;

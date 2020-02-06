@@ -2,14 +2,15 @@
   <div class="header-menu">
     <container>
       <router-link
-        class="header-menu--link"
-        to="/"
-      >Home</router-link>
-      &nbsp;
-      <router-link
-        class="header-menu--link"
-        to="/about"
-      >About</router-link>
+        v-for="(menuItem, index) in menu"
+        :key="index"
+        class="header-menu__link"
+        active-class="header-menu__link--active"
+        exact
+        :to=menuItem.to
+      >
+        {{menuItem.text}}
+      </router-link>
     </container>
   </div>
 </template>
@@ -17,7 +18,14 @@
 <script>
 
 export default {
-
+  data () {
+    return {
+      menu: [
+        { to: { name: 'home' }, text: 'Home' },
+        { to: { name: 'components' }, text: 'Components' },
+      ]
+    }
+  }
 }
 </script>
 
@@ -35,13 +43,17 @@ export default {
       flex-flow: row nowrap;
     }
 
-    &--link {
-      color: white;
+    &__link {
+      color: $clrLight;
       height: 100%;
       padding: 0 $gap;
+      line-height: $headerHeight;
+      text-decoration: none;
+      transition: background-color $timeShort;
       &:first-child {
         margin-left: -$gap;
       }
+      &--active,
       &:hover {
         background-color: $clrLink;
       }
