@@ -1,17 +1,15 @@
 <template>
   <div id="app">
-    <container class="nav">
-      <router-link to="/">Home</router-link>
-      &nbsp;
-      <router-link to="/about">About</router-link>
-    </container>
+    <header-menu/>
     <router-view/>
   </div>
 </template>
 
 <script>
+import HeaderMenu from '@/components/HeaderMenu.vue'
 
 export default {
+  components: { HeaderMenu }
 }
 </script>
 
