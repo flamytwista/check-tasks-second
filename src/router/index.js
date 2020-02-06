@@ -13,7 +13,7 @@ const routes = [
   {
     path: '/components',
     name: 'components',
-    component: () => import('../views/Components.vue')
+    component: () => import('../my-own-library/views/Components.vue')
   }
 ]
 
