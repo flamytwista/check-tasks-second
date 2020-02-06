@@ -2,7 +2,7 @@
   <div class="header-menu">
     <container>
       <router-link
-        v-for="(menuItem, index) in menu"
+        v-for="(menuItem, index) in items"
         :key="index"
         class="header-menu__link"
         active-class="header-menu__link--active"
@@ -18,14 +18,15 @@
 <script>
 
 export default {
-  data () {
-    return {
-      menu: [
-        { to: { name: 'home' }, text: 'Home' },
+  props: {
+    items: {
+      type: Array,
+      default: () => [
         { to: { name: 'components' }, text: 'Components' },
       ]
     }
-  }
+  },
+
 }
 </script>
 

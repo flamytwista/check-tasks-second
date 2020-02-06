@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="app">
-    <header-menu/>
+    <header-menu :items="menuItems" />
     <div class="app__container">
       <router-view/>
     </div>
@@ -8,10 +8,18 @@
 </template>
 
 <script>
-import HeaderMenu from '@/components/HeaderMenu.vue'
+import HeaderMenu from '@/my-own-library/components/HeaderMenu.vue'
 
 export default {
-  components: { HeaderMenu }
+  components: { HeaderMenu },
+  data () {
+    return {
+      menuItems: [
+        { to: { name: 'home' }, text: 'Home' },
+        { to: { name: 'components' }, text: 'Components' },
+      ]
+    }
+  }
 }
 </script>
 
