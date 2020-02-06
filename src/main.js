@@ -1,7 +1,12 @@
+// normalize.css должен подключаться перед App.vue
+import '@/plugins/index.js'
+
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+
+import '@/globalComponents.js'
 
 Vue.config.productionTip = false
 

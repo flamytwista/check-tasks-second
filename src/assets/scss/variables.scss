@@ -1,0 +1,40 @@
+// Цвета
+$clrFont:       #000000;
+$clrFontGray:   #939393;
+$clrLight:      #D7E2EC;
+
+$clrMain:       #4A76A8;              // Большой фон
+$clrAccent:     #5181B8;              // Кнопки, тонкие акцентированные линии
+$clrLink:       #2a5885;
+
+$clrBgAccent:   #CAD2DB;              // Чтобы было видно на фоне любого серого. Например для скроллбара, или подчеркивания в меню
+$clrBgBig:      #EDEEF0;              // для больших задних фонов, например на всю страницу
+$clrBgSmall:    #FAFBFC;              // например для шапки в таблице
+
+$clrBorderOnLightBg:  #EDEEF0;        // на фоне белого
+$clrBorderOnDarkBg:   #E3E4E8;        // на фоне стыка белого с серым
+
+$clrHighlightDefault: #CFE4FA;
+$clrHighlightSuccess: #D4FACF;
+$clrHighlightError:   #FACFCB;
+
+//размеры Шрифтов
+$fs: 16px;
+$fsSmall: 12px;
+
+// Брекпоинты
+$bpSm:  480px;
+$bpSm2: 768px;
+$bpMd:  960px;
+$bpLg:  1280px;
+$bpXl:  1600px;
+
+// Время анимаций
+$timeShort: 200ms;
+$timeMedium: 1000ms;
+
+// Типовые размеры для типовой верстки
+$gap: 16px;
+$border-radius: 4px;
+$scrollbarWidth: 6px; // совпадает с размером из FireFox
+$headerHeight: $gap * 3;
