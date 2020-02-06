@@ -1,16 +1,16 @@
 <template>
   <container class="home">
-    <h1>This is an home page</h1>
-    <p :key="n" v-for="n in 40">
-      : {{ n }} This is an home page
-    </p>
+    <h1>Заметки</h1>
+    <NotesWrapper/>
   </container>
 </template>
 
 <script>
 
+import NotesWrapper from '@/components/NotesWrapper.vue'
+
 export default {
   name: 'home',
-  components: {}
+  components: { NotesWrapper }
 }
 </script>

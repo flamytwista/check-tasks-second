@@ -1,0 +1,19 @@
+/**
+ * Правильно выстраивает в ряд. Нужен потому-что `row-gap` and `column-gap` - еще пока в working draft (в FF работает)
+ * $qty - Int, 1 или более. Желаемое количество элементов в ряд
+ * $gap - px или другой юнит. Желаемое расстояние между элементами
+ * На данный момент проверено только при mobile-first-вёрстке (от меньшего к большему)
+ */
+@mixin flexItemWidthAndMargin($qty, $gap) {
+  $summaryGapDistance: ($qty - 1) * $gap;
+  width: calc((100% - #{$summaryGapDistance}) / #{$qty});
+  margin-right: $gap;
+
+  // Сбросить предыдущее значение. Нужно для использования mobile-first подхода (от меньшего к большему)
+  &:nth-child(#{$qty - 1}n) {
+    margin-right: $gap;
+  }
+  &:nth-child(#{$qty}n) {
+    margin-right: 0;
+  }
+}

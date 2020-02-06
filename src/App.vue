@@ -23,6 +23,10 @@ export default {
   .app {
     &__container {
       padding: $gap 0;
+
+      // Страховка на случай ширины потомков больше чем ширина страницы
+      // С высотой работает нормально
+      overflow: hidden;
     }
   }
 </style>
