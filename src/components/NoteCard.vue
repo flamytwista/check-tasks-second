@@ -1,11 +1,14 @@
 <template>
   <div class="note-card">
-    <h2>Заголовок карточки</h2>
+    <h3>{{$faker().random.words() + $faker().random.words()}}</h3>
+    <div :set="qty = $faker().random.number(5) + 1"></div>
+    <div :set="qtyToDisplay = qty >= 3 ? 3 : qty"></div>
     <ul>
-      <li>первое</li>
-      <li>второе</li>
-      <li>третье</li>
-      <li>...</li>
+      <li :key="n" v-for="n in qtyToDisplay">
+        <!--Для ограничения длины троеточием приходится отказаться от display: list-item. Поэтому &bullet;-->
+        &bullet; {{$faker().random.words() + $faker().random.words()}}
+      </li>
+      <li v-if="qty > 3">...</li>
     </ul>
   </div>
 </template>
@@ -22,5 +25,13 @@ export default {
     padding: $gap;
     border-radius: $borderRadius;
     background-color: white;
+
+    h3 {
+      @include multiLineEllipsis(2, 44px);
+    }
+
+    ul > li {
+      @include singleLineEllipsis();
+    }
   }
 </style>

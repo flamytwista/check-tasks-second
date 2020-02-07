@@ -17,3 +17,20 @@
     margin-right: 0;
   }
 }
+
+// Добавляет ... если текст не помещается в строку
+@mixin singleLineEllipsis(){
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; //clip - будет посто обрезать
+}
+
+// Добавляет ... если текст не помещается в несколько указаных строк
+@mixin multiLineEllipsis($linesQty, $height){
+  height: $height;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $linesQty;
+  overflow: hidden;
+}
