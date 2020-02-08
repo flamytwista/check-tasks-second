@@ -1,40 +1,55 @@
-// Цвета
+//// Комментарии должны быть НАД переменной. Тогда IDE удобно подсказывает.
+
+//// Цвета
+
 $clrFont:       #000000;
 $clrFontGray:   #939393;
 $clrLight:      #D7E2EC;
 
-$clrMain:       #4A76A8;              // Большой фон
-$clrAccent:     #5181B8;              // Кнопки, тонкие акцентированные линии
-$clrLink:       #2a5885;
+// Большой фон
+$clrMain:       #4A76A8;
+// Кнопки, тонкие акцентированные линии
+$clrMainAccent: #5181B8;
+$clrMainLink:   #2a5885;
 
-$clrBgAccent:   #CAD2DB;              // Чтобы было видно на фоне любого серого. Например для скроллбара, или подчеркивания в меню
-$clrBgBig:      #EDEEF0;              // для больших задних фонов, например на всю страницу
-$clrBgSmall:    #FAFBFC;              // например для шапки в таблице
+// Чтобы было видно на фоне любого серого. Например для скроллбара, или подчеркивания в меню
+$clrBgAccent:   #CAD2DB;
+// для больших задних фонов, например на всю страницу
+$clrBgBig:      #EDEEF0;
+// например для шапки в таблице
+$clrBgSmall:    #FAFBFC;
 
-$clrBorderOnLightBg:  #EDEEF0;        // на фоне белого
-$clrBorderOnDarkBg:   #E3E4E8;        // на фоне стыка белого с серым
+// на фоне белого
+$clrBorderOnLightBg:  #EDEEF0;
+// на фоне стыка белого с серым
+$clrBorderOnDarkBg:   #E3E4E8;
 
 $clrHighlightDefault: #CFE4FA;
 $clrHighlightSuccess: #D4FACF;
 $clrHighlightError:   #FACFCB;
 
-//размеры Шрифтов
+//// размеры Шрифтов
+
 $fs: 16px;
 $fsSmall: 12px;
 
-// Брекпоинты
+//// Брекпоинты
+
 $bpSm:  480px;
 $bpSm2: 768px;
 $bpMd:  960px;
 $bpLg:  1280px;
 $bpXl:  1600px;
 
-// Время анимаций
+//// Время анимаций
+
 $timeShort: 200ms;
 $timeMedium: 1000ms;
 
-// Типовые размеры для типовой верстки
+//// Типовые размеры для типовой верстки
+
 $gap: 16px;
 $borderRadius: 4px;
-$scrollbarWidth: 6px; // совпадает с размером из FireFox
+// совпадает с размером из FireFox
+$scrollbarWidth: 6px;
 $headerHeight: $gap * 3;

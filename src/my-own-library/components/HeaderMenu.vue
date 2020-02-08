@@ -56,7 +56,7 @@ export default {
       }
       &--active,
       &:hover {
-        background-color: $clrLink;
+        background-color: $clrMainLink;
       }
     }
   }
