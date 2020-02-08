@@ -6,11 +6,14 @@
     <h4>Заголовок 4</h4>
     <h5>Заголовок 5</h5>
     <h6>Заголовок 6</h6>
+    <h2>Тексты</h2>
+    <p>Lorem ipsum dolor <a href="http://ya.ru">ya.ru</a> sit amet, consectetur adipisicing elit. Consectetur doloribus eum, laudantium natus nobis non rem. Corporis ipsum itaque officia quibusdam recusandae, sed sint? Dolor nobis non provident suscipit totam.</p>
     <h2>Кнопки</h2>
     <h3>Кнопки-Кнопки</h3>
     <div class="components__buttons">
       <btn>Main</btn>
-      <btn>Кнопки</btn>
+      <btn class="btn--error">Error</btn>
+      <btn class="btn--success">Success</btn>
     </div>
     <h3>Кнопки-Ссылки</h3>
     <div class="components__buttons">

@@ -4,7 +4,8 @@ body {
 }
 
 a {
-  color: $clrMainLink;
+  //color: $clrMainDark;
+  color: clrFill('accent');
 }
 
 // Заголовки стилизованы в normalize.css. На будущее пригодиться.

@@ -2,31 +2,76 @@
 
 //// Цвета
 
-$clrFont:       #000000;
-$clrFontGray:   #939393;
-$clrLight:      #D7E2EC;
+// TODO: потом перенести все цветовые миксины в миксины
 
-// Большой фон
-$clrMain:       #4A76A8;
-// Кнопки, тонкие акцентированные линии
-$clrMainAccent: #5181B8;
-$clrMainLink:   #2a5885;
+/**
+ * $color = 'main' || 'success' || 'error'
+ * $type = 'font' ||
+ */
 
+$clrFont:       hsl(0, 0%, 0%);
+$clrFontGray:   hsl(0, 0%, 58%);
+$clrFontLight:  hsl(212, 36%, 88%);
+
+// colorType: main, success, error
+@function getHue($colorType: main) {
+
+  // если main или другой
+  $hue: 212;
+
+  @if $colorType == success {
+    $hue: 113
+  } @else if $colorType == error {
+    $hue: 5
+  }
+  @return $hue;
+}
+
+// $nuance: small, big, accent
+@function clrFill($nuance: small, $color: main){
+  $hue: getHue($color);
+
+  // small или другой
+  $saturation: 42%;
+  $lightness: 52%;
+
+  @if $nuance == accent {
+    $saturation: 52%;
+    $lightness: 34%;
+  } @else if $nuance == big {
+    $saturation: 39%;
+    $lightness: 47%;
+  }
+
+  $clr: hsl($hue, $saturation, $lightness);
+  @return $clr;
+}
+
+
+// для подсветки на белом фоне
+$clrMainLight:  hsl(212, 81%, 90%);
 // Чтобы было видно на фоне любого серого. Например для скроллбара, или подчеркивания в меню
-$clrBgAccent:   #CAD2DB;
+$clrBgAccent:   hsl(212, 19%, 83%);
 // для больших задних фонов, например на всю страницу
-$clrBgBig:      #EDEEF0;
+$clrBgBig:      hsl(212, 9%, 94%);
 // например для шапки в таблице
-$clrBgSmall:    #FAFBFC;
+$clrBgSmall:    hsl(212, 25%, 98%);
 
 // на фоне белого
-$clrBorderOnLightBg:  #EDEEF0;
+$clrBorderOnLightBg: hsl(212, 9%, 94%);
 // на фоне стыка белого с серым
-$clrBorderOnDarkBg:   #E3E4E8;
+$clrBorderOnDarkBg: hsl(212, 10%, 90%);
 
-$clrHighlightDefault: #CFE4FA;
-$clrHighlightSuccess: #D4FACF;
-$clrHighlightError:   #FACFCB;
+
+//$clrSuccess:       hsl(113, 39%, 47%);
+//$clrSuccessAccent: hsl(113, 42%, 52%);
+//$clrSuccessDark:   hsl(113, 52%, 34%);
+//$clrSuccessLight:  hsl(113, 81%, 90%);
+//
+//$clrError:       hsl(5, 39%, 47%);
+//$clrErrorAccent: hsl(5, 42%, 52%);
+//$clrErrorDark:   hsl(5, 52%, 34%);
+//$clrErrorLight:  hsl(5, 81%, 90%);
 
 //// размеры Шрифтов
 

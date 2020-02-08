@@ -33,7 +33,7 @@ export default {
 <style scoped lang="scss">
   .header-menu {
     height: $headerHeight;
-    background-color: $clrMain;
+    background-color: clrFill();
     position: fixed;
     top: 0;
     width: 100%;
@@ -45,7 +45,7 @@ export default {
     }
 
     &__link {
-      color: $clrLight;
+      color: $clrFontLight;
       height: 100%;
       padding: 0 $gap;
       line-height: $headerHeight;
@@ -56,7 +56,7 @@ export default {
       }
       &--active,
       &:hover {
-        background-color: $clrMainLink;
+        background-color: clrFill(accent);
       }
     }
   }
