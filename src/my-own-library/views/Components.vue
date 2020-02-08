@@ -9,13 +9,16 @@
     <h2>Кнопки</h2>
     <h3>Кнопки-Кнопки</h3>
     <div class="components__buttons">
-      <btn>Кнопки</btn>
+      <btn>Main</btn>
       <btn>Кнопки</btn>
     </div>
     <h3>Кнопки-Ссылки</h3>
     <div class="components__buttons">
-      <btn href="http://ya.ru">Кнопки</btn>
-      <btn href="ya.ru">Кнопки</btn>
+      <btn href="http://ya.ru">ya.ru</btn>
+    </div>
+    <h3>Кнопки-RouterLink</h3>
+    <div class="components__buttons">
+      <btn :to="{name: 'home'}">На главную</btn>
     </div>
   </container>
 </template>
