@@ -45,7 +45,7 @@ export default {
     }
 
     &__link {
-      color: $clrFontLight;
+      color: clrFont(ligth, main);
       height: 100%;
       padding: 0 $gap;
       line-height: $headerHeight;

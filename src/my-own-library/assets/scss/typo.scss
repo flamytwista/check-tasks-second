@@ -1,6 +1,6 @@
 body {
   font-size: $fs;
-  color: $clrFont;
+  color: clrFont(dark, main);
 }
 
 a {

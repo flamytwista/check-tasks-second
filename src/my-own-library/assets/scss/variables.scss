@@ -5,10 +5,6 @@
 // TODO: потом перенести все цветовые миксины в миксины
 
 
-$clrFont:       hsl(0, 0%, 0%);
-$clrFontGray:   hsl(0, 0%, 58%);
-$clrFontLight:  hsl(212, 36%, 88%);
-
 // colorType: main, success, error
 @function getHue($colorType: main) {
 
@@ -85,6 +81,24 @@ $clrFontLight:  hsl(212, 36%, 88%);
     $saturation: 81%;
     $lightness: 90%;
   }
+  @return hsl($hue, $saturation, $lightness);
+}
+
+@function clrFont($nuance: dark, $color: main){
+  $hue: getHue($color);
+
+  // dark или default
+  $saturation: 0%;
+  $lightness: 0%;
+
+  @if $nuance == gray {
+    $saturation: 0%;
+    $lightness: 58%;
+  } @else if $nuance == light {
+    $saturation: 36%;
+    $lightness: 88%;
+  }
+
   @return hsl($hue, $saturation, $lightness);
 }
 
