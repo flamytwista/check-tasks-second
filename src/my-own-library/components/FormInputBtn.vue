@@ -32,6 +32,8 @@ export default {
     $height: $gap * 2;
 
     display: block;
+    width: fit-content;
+
     border-radius: $borderRadius;
     outline: none !important;
     text-decoration: none;

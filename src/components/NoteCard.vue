@@ -12,6 +12,11 @@
       </li>
       <li v-if="qty > 3">...</li>
     </ul>
+    <div class="note-card__pusher"></div>
+    <div class="note-card__buttons">
+      <btn :to="{name: 'home'}">Изменить</btn>
+      <btn class="btn--error">Удалить</btn>
+    </div>
   </div>
 </template>
 
@@ -28,6 +33,8 @@ export default {
     border: 1px solid clrBorder(lighter, main);
     border-radius: $borderRadius;
     background-color: white;
+    display: flex;
+    flex-flow: column nowrap;
 
     &__header {
       @include multiLineEllipsis(2, 37px);
@@ -35,8 +42,10 @@ export default {
 
     ul > li {
       @include singleLineEllipsis();
-      //color: $clrFontGray;
       color: clrFont(gray, main);
+    }
+    .note-card__pusher {
+      flex: 1 0 auto;
     }
   }
 </style>
