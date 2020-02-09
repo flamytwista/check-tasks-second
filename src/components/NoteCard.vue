@@ -23,6 +23,7 @@ export default {
 <style scoped lang="scss">
   .note-card {
     padding: $gap;
+    border: 1px solid clrBorder(lighter, main);
     border-radius: $borderRadius;
     background-color: white;
 

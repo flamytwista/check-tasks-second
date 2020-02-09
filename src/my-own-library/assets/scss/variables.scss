@@ -4,10 +4,6 @@
 
 // TODO: потом перенести все цветовые миксины в миксины
 
-/**
- * $color = 'main' || 'success' || 'error'
- * $type = 'font' ||
- */
 
 $clrFont:       hsl(0, 0%, 0%);
 $clrFontGray:   hsl(0, 0%, 58%);
@@ -48,6 +44,23 @@ $clrFontLight:  hsl(212, 36%, 88%);
 }
 
 
+// $nuance: lightest, lighter
+// lightest - на фоне белого
+// lighter - на стыке белого с серым
+@function clrBorder($nuance: lightest, $color: main){
+  $hue: getHue($color);
+
+  // lightest или другой
+  $saturation: 9%;
+  $lightness: 94%;
+  @if $nuance == lighter {
+    $saturation: 10%;
+    $lightness: 90%;
+  }
+  @return hsl($hue, $saturation, $lightness);
+}
+
+
 // для подсветки на белом фоне
 $clrMainLight:  hsl(212, 81%, 90%);
 // Чтобы было видно на фоне любого серого. Например для скроллбара, или подчеркивания в меню
@@ -57,10 +70,7 @@ $clrBgBig:      hsl(212, 9%, 94%);
 // например для шапки в таблице
 $clrBgSmall:    hsl(212, 25%, 98%);
 
-// на фоне белого
-$clrBorderOnLightBg: hsl(212, 9%, 94%);
-// на фоне стыка белого с серым
-$clrBorderOnDarkBg: hsl(212, 10%, 90%);
+
 
 
 //$clrSuccess:       hsl(113, 39%, 47%);
