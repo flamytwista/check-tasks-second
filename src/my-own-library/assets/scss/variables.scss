@@ -23,6 +23,7 @@ $clrFontLight:  hsl(212, 36%, 88%);
   @return $hue;
 }
 
+// Ярко выраженный цвет. Например кнопка или шапка.
 // $nuance: small, big, accent
 @function clrFill($nuance: small, $color: main){
   $hue: getHue($color);
@@ -44,6 +45,7 @@ $clrFontLight:  hsl(212, 36%, 88%);
 }
 
 
+// Цвет бордюра
 // $nuance: lightest, lighter
 // lightest - на фоне белого
 // lighter - на стыке белого с серым
@@ -53,6 +55,7 @@ $clrFontLight:  hsl(212, 36%, 88%);
   // lightest или другой
   $saturation: 9%;
   $lightness: 94%;
+
   @if $nuance == lighter {
     $saturation: 10%;
     $lightness: 90%;
@@ -60,28 +63,30 @@ $clrFontLight:  hsl(212, 36%, 88%);
   @return hsl($hue, $saturation, $lightness);
 }
 
+// Светлый задний фон
+// big - например фон всей страницы
+// small - например для шапки в таблице
+// accent - Чтобы выделялось на фоне любого серого. Например для скроллбара, или подчеркивания в меню.
+// highlight - для blink-эффекта
+@function clrBg($nuance: big, $color: main){
+  $hue: getHue($color);
 
-// для подсветки на белом фоне
-$clrMainLight:  hsl(212, 81%, 90%);
-// Чтобы было видно на фоне любого серого. Например для скроллбара, или подчеркивания в меню
-$clrBgAccent:   hsl(212, 19%, 83%);
-// для больших задних фонов, например на всю страницу
-$clrBgBig:      hsl(212, 9%, 94%);
-// например для шапки в таблице
-$clrBgSmall:    hsl(212, 25%, 98%);
+  // big или другой
+  $saturation: 9%;
+  $lightness: 94%;
 
-
-
-
-//$clrSuccess:       hsl(113, 39%, 47%);
-//$clrSuccessAccent: hsl(113, 42%, 52%);
-//$clrSuccessDark:   hsl(113, 52%, 34%);
-//$clrSuccessLight:  hsl(113, 81%, 90%);
-//
-//$clrError:       hsl(5, 39%, 47%);
-//$clrErrorAccent: hsl(5, 42%, 52%);
-//$clrErrorDark:   hsl(5, 52%, 34%);
-//$clrErrorLight:  hsl(5, 81%, 90%);
+  @if $nuance == small {
+    $saturation: 25%;
+    $lightness: 98%;
+  } @else if $nuance == accent {
+    $saturation: 19%;
+    $lightness: 83%;
+  } @else if $nuance == highlight {
+    $saturation: 81%;
+    $lightness: 90%;
+  }
+  @return hsl($hue, $saturation, $lightness);
+}
 
 //// размеры Шрифтов
 
