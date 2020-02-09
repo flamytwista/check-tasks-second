@@ -1,0 +1,100 @@
+// Функции для просчета цветов.
+
+
+// colorType: main, success, error
+@function getHue($colorType: main) {
+
+  // если main или другой
+  $hue: 212;
+
+  @if $colorType == success {
+    $hue: 113
+  } @else if $colorType == error {
+    $hue: 5
+  }
+  @return $hue;
+}
+
+// Ярко выраженный цвет. Например кнопка или шапка.
+// $nuance: small, big, accent
+@function clrFill($nuance: small, $color: main){
+  $hue: getHue($color);
+
+  // small или другой
+  $saturation: 42%;
+  $lightness: 52%;
+
+  @if $nuance == accent {
+    $saturation: 52%;
+    $lightness: 34%;
+  } @else if $nuance == big {
+    $saturation: 39%;
+    $lightness: 47%;
+  }
+
+  $clr: hsl($hue, $saturation, $lightness);
+  @return $clr;
+}
+
+
+// Цвет бордюра
+// $nuance: lightest, lighter
+// lightest - на фоне белого
+// lighter - на стыке белого с серым
+@function clrBorder($nuance: lightest, $color: main){
+  $hue: getHue($color);
+
+  // lightest или другой
+  $saturation: 9%;
+  $lightness: 94%;
+
+  @if $nuance == lighter {
+    $saturation: 10%;
+    $lightness: 90%;
+  }
+  @return hsl($hue, $saturation, $lightness);
+}
+
+// Светлый задний фон
+// big - например фон всей страницы
+// small - например для шапки в таблице
+// accent - Чтобы выделялось на фоне любого серого. Например для скроллбара, или подчеркивания в меню.
+// highlight - для blink-эффекта
+@function clrBg($nuance: big, $color: main){
+  $hue: getHue($color);
+
+  // big или другой
+  $saturation: 9%;
+  $lightness: 94%;
+
+  @if $nuance == small {
+    $saturation: 25%;
+    $lightness: 98%;
+  } @else if $nuance == accent {
+    $saturation: 19%;
+    $lightness: 83%;
+  } @else if $nuance == highlight {
+    $saturation: 81%;
+    $lightness: 90%;
+  }
+  @return hsl($hue, $saturation, $lightness);
+}
+
+// $nuance: dark, gray, light
+@function clrFont($nuance: dark, $color: main){
+  $hue: getHue($color);
+
+  // dark или default
+  $saturation: 0%;
+  $lightness: 0%;
+
+  @if $nuance == gray {
+    $saturation: 0%;
+    $lightness: 58%;
+  } @else if $nuance == light {
+    $saturation: 36%;
+    $lightness: 88%;
+  }
+
+  @return hsl($hue, $saturation, $lightness);
+}

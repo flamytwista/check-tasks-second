@@ -24,7 +24,6 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "~@/my-own-library/assets/scss/variables.scss";
   @import '~@/my-own-library/assets/scss/global.scss';
   @import '~@/my-own-library/assets/scss/typo.scss';
 
