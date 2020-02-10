@@ -15,6 +15,9 @@
       <btn class="btn--error">Error</btn>
       <btn class="btn--success">Success</btn>
     </div>
+    <div class="components__buttons">
+      <btn class="btn--small">Small</btn>
+    </div>
     <h3>Кнопки-Ссылки</h3>
     <div class="components__buttons">
       <btn href="https://stackoverflow.com/users/1638298/flamytwista" target="_blank">stackoverflow.com</btn>
@@ -27,13 +30,15 @@
 </template>
 
 <style lang="scss">
-  .components {
-    &__buttons {
-      display: flex;
-      flex-flow: row wrap;
-      > * {
-        margin-right: $gap * 2;
-      }
+  .components {}
+  .components__buttons {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: $gap;
+
+    > * {
+      margin-right: $gap;
+      margin-bottom: $gap;
     }
   }
 </style>

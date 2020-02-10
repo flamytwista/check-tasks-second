@@ -5,17 +5,15 @@
     <div :set="qtyToDisplay = qty >= 3 ? 3 : qty"></div>
     <ul>
       <li :key="n" v-for="n in qtyToDisplay">
-        <small>
-          <!--Для ограничения длины троеточием приходится отказаться от display: list-item. Поэтому &bullet;-->
-          &bullet; {{$faker().random.words() + $faker().random.words()}}
-        </small>
+        <!--Для ограничения длины троеточием приходится отказаться от display: list-item. Поэтому &bullet;-->
+        &bullet; {{$faker().random.words() + $faker().random.words()}}
       </li>
       <li v-if="qty > 3">...</li>
     </ul>
     <div class="note-card__pusher"></div>
     <div class="note-card__buttons">
-      <btn :to="{name: 'home'}">Изменить</btn>
-      <btn class="btn--error">Удалить</btn>
+      <btn class="btn--small" :to="{name: 'home'}">Изменить</btn>
+      <btn class="btn--error btn--small">Удалить</btn>
     </div>
   </div>
 </template>
@@ -43,9 +41,14 @@ export default {
     ul > li {
       @include singleLineEllipsis();
       color: clrFont(gray, main);
+      font-size: $fsSmall;
     }
     .note-card__pusher {
       flex: 1 0 auto;
+    }
+    .note-card__buttons {
+      display: flex;
+      justify-content: space-between;
     }
   }
 </style>

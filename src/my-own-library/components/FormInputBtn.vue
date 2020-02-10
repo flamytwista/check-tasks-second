@@ -38,7 +38,6 @@ export default {
     outline: none !important;
     text-decoration: none;
     color: white;
-    //background-color: $clrMainAccent;
     background-color: clrFill();
     border: none;
     height: $height;
@@ -61,5 +60,12 @@ export default {
     &:hover {
       background-color: clrFill(accent, success);
     }
+  }
+  .btn--small {
+    $height: $gap * 1.5;
+    padding: 0 $gap;
+    height: $height;
+    line-height: $height;
+    font-size: $fsSmall;
   }
 </style>
