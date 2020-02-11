@@ -12,8 +12,18 @@
     </ul>
     <div class="note-card__pusher"></div>
     <div class="note-card__buttons">
-      <btn class="btn--small" :to="{name: 'home'}">Изменить</btn>
-      <btn class="btn--error btn--small">Удалить</btn>
+      <btn
+        :class="{'btn--small': areButtonsSmall}"
+        :to="{name: 'home'}"
+      >
+        Изменить
+      </btn>
+      <btn
+        class="btn--error"
+        :class="{'btn--small': areButtonsSmall}"
+      >
+        Удалить
+      </btn>
     </div>
   </div>
 </template>
@@ -21,7 +31,11 @@
 <script>
 
 export default {
-
+  computed: {
+    areButtonsSmall () {
+      return !this.$screen.bpSm
+    }
+  }
 }
 </script>
 
@@ -36,6 +50,7 @@ export default {
 
     &__header {
       @include multiLineEllipsis(2, 37px);
+      margin-bottom: 0;
     }
 
     ul > li {
@@ -48,7 +63,15 @@ export default {
     }
     .note-card__buttons {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
+      .btn {
+        &:last-child {
+          margin-left: $gap;
+        }
+      }
+      @media (min-width: $bpXl) {
+        justify-content: space-between;
+      }
     }
   }
 </style>
