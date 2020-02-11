@@ -3,8 +3,7 @@
     <h1>Заметки</h1>
     <btn
       class="home__add-btn"
-      classZ="{'btn--small': areButtonsSmall}"
-      :to="{name: 'home'}"
+      :to="{name: 'noteAdd'}"
     >
       Создать
     </btn>

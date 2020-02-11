@@ -14,7 +14,7 @@
     <div class="note-card__buttons">
       <btn
         :class="{'btn--small': areButtonsSmall}"
-        :to="{name: 'home'}"
+        :to="{name: 'noteEdit', params: { noteId: 123 }}"
       >
         Изменить
       </btn>

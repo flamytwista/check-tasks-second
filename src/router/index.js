@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '@/views/Home.vue'
+import NoteAddOrEdit from '@/views/NoteAddOrEdit.vue'
 import LibraryRoutes from '@/my-own-library/router/index.js'
 
 Vue.use(VueRouter)
@@ -11,6 +12,16 @@ const routes = [
     path: '/',
     name: 'home',
     component: Home
+  },
+  {
+    path: '/add-note',
+    name: 'noteAdd',
+    component: NoteAddOrEdit
+  },
+  {
+    path: '/edit-note/:noteId',
+    name: 'noteEdit',
+    component: NoteAddOrEdit
   },
 ]
 
