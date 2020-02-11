@@ -11,6 +11,8 @@
     $hue: 113
   } @else if $colorType == error {
     $hue: 5
+  } @else if $colorType == danger {
+    $hue: 25
   }
   @return $hue;
 }

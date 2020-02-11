@@ -9,7 +9,7 @@
     <div class="clearfix"></div>
     <div class="note-edit__control-buttons">
       <btn class="">{{ actionTitle }}</btn>
-      <btn class="btn--error">Отменить</btn>
+      <btn class="btn--danger">Отменить</btn>
       <btn class="btn--error">Удалить</btn>
     </div>
 

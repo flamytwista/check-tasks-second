@@ -61,6 +61,12 @@ export default {
       background-color: clrFill(accent, success);
     }
   }
+  .btn--danger {
+    background-color: clrFill(small, danger);
+    &:hover {
+      background-color: clrFill(accent, danger);
+    }
+  }
   .btn--small {
     $height: $gap * 1.5;
     padding: 0 $gap;

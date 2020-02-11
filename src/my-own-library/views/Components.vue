@@ -15,8 +15,9 @@
     <h4>Кнопки-Кнопки</h4>
     <div class="components__buttons">
       <btn>Main</btn>
-      <btn class="btn--error">Error</btn>
       <btn class="btn--success">Success</btn>
+      <btn class="btn--danger">Danger</btn>
+      <btn class="btn--error">Error</btn>
     </div>
     <div class="components__buttons">
       <btn class="btn--small">Small</btn>
