@@ -8,8 +8,11 @@
     <h6>Заголовок 6</h6>
     <h2>Текст</h2>
     <p>Lorem ipsum dolor <a href="http://ya.ru">ya.ru</a> sit amet, consectetur adipisicing elit. Consectetur doloribus eum, laudantium natus nobis non rem. Corporis ipsum itaque officia quibusdam recusandae, sed sint? Dolor nobis non provident suscipit totam.</p>
-    <h2>Кнопки</h2>
-    <h3>Кнопки-Кнопки</h3>
+
+    <h2>Формы</h2>
+
+    <h3>Кнопки</h3>
+    <h4>Кнопки-Кнопки</h4>
     <div class="components__buttons">
       <btn>Main</btn>
       <btn class="btn--error">Error</btn>
@@ -18,19 +21,26 @@
     <div class="components__buttons">
       <btn class="btn--small">Small</btn>
     </div>
-    <h3>Кнопки-Ссылки</h3>
+    <h4>Кнопки-Ссылки</h4>
     <div class="components__buttons">
       <btn href="https://stackoverflow.com/users/1638298/flamytwista" target="_blank">stackoverflow.com</btn>
     </div>
-    <h3>Кнопки-RouterLink</h3>
+    <h4>Кнопки-RouterLink</h4>
     <div class="components__buttons">
       <btn :to="{name: 'home'}">На главную</btn>
     </div>
+
+    <h3>Input Text</h3>
+    <txt placeholder="placeholder for text"></txt>
+    <br><br>
+    <txt value="default value"></txt>
   </container>
 </template>
 
 <style lang="scss">
-  .components {}
+  .components {
+    padding-bottom: 200px;
+  }
   .components__buttons {
     display: flex;
     flex-flow: row wrap;

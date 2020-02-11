@@ -1,6 +1,7 @@
 <template>
   <container class="note-edit">
     <h1>{{ title }}</h1>
+    <txt placeholder="Заголовок"></txt>
   </container>
 </template>
 
@@ -12,7 +13,7 @@ export default {
      * Редактируется-ли существующая заметка, или добавляется новая
      * @returns {boolean}
      */
-    isEditing (){
+    isEditing () {
       return this.$route.name === 'noteEdit'
     },
     title () {
