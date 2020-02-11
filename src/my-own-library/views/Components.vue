@@ -35,6 +35,9 @@
     <txt placeholder="placeholder for text"></txt>
     <br><br>
     <txt value="default value"></txt>
+
+    <h3>Checkbox</h3>
+    <check-box />
   </container>
 </template>
 
