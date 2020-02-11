@@ -33,10 +33,12 @@
 
     <h3>Input Text</h3>
     <txt placeholder="placeholder for text"></txt>
-    <br><br>
+    <br>
     <txt value="default value"></txt>
 
     <h3>Checkbox</h3>
+    <check-box label="С указанием label" />
+    <br>
     <check-box />
   </container>
 </template>

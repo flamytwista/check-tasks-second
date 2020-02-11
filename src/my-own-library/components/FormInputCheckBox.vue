@@ -6,37 +6,43 @@
       checked
       :id="`check-box-${_uid}`"
     />
-    <span class="check-box__label">Default checkbox state</span>
+    <span
+      class="check-box__label"
+      :class="{'check-box__label--with-text': label}"
+    >
+      {{ label }}
+    </span>
   </label>
 </template>
 
 <script>
 
 export default {
-  mounted () {
-    console.log(this)
-    console.log(this.$el)
+  props: {
+    label: {
+      type: String,
+      default: null
+    }
   }
 }
 </script>
 
 <style scoped lang="scss">
   .check-box {
-    outline: 1px solid darkred;
+    display: block;
     cursor: pointer;
     position: relative;
-    display: flex;
-    flex-flow: row nowrap;
     width: fit-content;
     height: $gap + 2px;
 
-    .check-box__label {
-      padding-left: $gap;
-      user-select: none;
+    .check-box__input {
+      display: none;
+      width: $gap;
+      height: $gap;
+    }
 
-      .check-box__input {
-        display: none;
-      }
+    .check-box__label {
+      user-select: none;
 
       &:before,
       &:after {
@@ -61,7 +67,12 @@ export default {
         opacity: 0;
         transition: opacity $timeShort;
         transform: translateX(3px) translateY(1px);
+        font-weight: bold;
       }
+    }
+
+    .check-box__label--with-text {
+      padding-left: $gap * 1.5;
     }
 
     // чекнутый checkmark

@@ -15,6 +15,7 @@ export default {
 
 <style scoped lang="scss">
   .txt {
+    display: block;
     $height: $gap * 2;
     height: $height;
     line-height: $height;
