@@ -1,0 +1,28 @@
+//// Комментарии должны быть НАД переменной. Тогда IDE удобно подсказывает.
+
+//// размеры Шрифтов
+
+$fs: 16px;
+$fsSmall: 14px;
+$fsTiny: 12px;
+
+//// Брекпоинты
+
+$bpSm:  480px;
+$bpSm2: 768px;
+$bpMd:  960px;
+$bpLg:  1280px;
+$bpXl:  1600px;
+
+//// Время анимаций
+
+$timeShort: 200ms;
+$timeMedium: 1000ms;
+
+//// Типовые размеры для типовой верстки
+
+$gap: 16px;
+$borderRadius: 4px;
+// совпадает с размером из FireFox
+$scrollbarWidth: 6px;
+$headerHeight: $gap * 3;

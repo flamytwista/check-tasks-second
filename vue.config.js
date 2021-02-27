@@ -4,7 +4,7 @@ module.exports = {
     sourceMap: true,
     loaderOptions: {
       sass: {
-        prependData: '@import "~@/assets/scss/variables.scss";',
+        prependData: '@import "~@/sassPrependData.scss";',
       },
     },
   },

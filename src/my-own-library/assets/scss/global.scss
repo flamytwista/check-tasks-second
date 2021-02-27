@@ -1,6 +1,6 @@
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: $clrBgBig;
+  background-color: clrBg(big, main);
   margin-top: $headerHeight;
 }
 
@@ -11,6 +11,15 @@ body {
   // чтобы у вложенных элементов в любой блок не было отступов сверху и снизу
   > *:first-child { margin-top: 0 }
   > *:last-child { margin-bottom: 0 }
+}
+
+input, textarea {
+  outline: none !important;
+}
+
+// clearfix для float в виде div
+div.clearfix {
+  clear: both;
 }
 
 // Глобальный модификатор для красивого скроллбара
@@ -27,9 +36,9 @@ body {
   }
 
   &:hover {
-    scrollbar-color: $clrBgAccent transparent;
+    scrollbar-color: clrBg(accent, main) transparent;
   }
   &:hover::-webkit-scrollbar-thumb{
-      background: $clrBgAccent;
+      background: clrBg(accent, main);
   }
 }

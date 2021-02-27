@@ -2,7 +2,7 @@
   <div class="header-menu">
     <container>
       <router-link
-        v-for="(menuItem, index) in menu"
+        v-for="(menuItem, index) in items"
         :key="index"
         class="header-menu__link"
         active-class="header-menu__link--active"
@@ -18,21 +18,22 @@
 <script>
 
 export default {
-  data () {
-    return {
-      menu: [
-        { to: { name: 'home' }, text: 'Home' },
+  props: {
+    items: {
+      type: Array,
+      default: () => [
         { to: { name: 'components' }, text: 'Components' },
       ]
     }
-  }
+  },
+
 }
 </script>
 
 <style scoped lang="scss">
   .header-menu {
     height: $headerHeight;
-    background-color: $clrMain;
+    background-color: clrFill();
     position: fixed;
     top: 0;
     width: 100%;
@@ -44,7 +45,7 @@ export default {
     }
 
     &__link {
-      color: $clrLight;
+      color: clrFont(light, main);
       height: 100%;
       padding: 0 $gap;
       line-height: $headerHeight;
@@ -55,7 +56,7 @@ export default {
       }
       &--active,
       &:hover {
-        background-color: $clrLink;
+        background-color: clrFill(accent);
       }
     }
   }

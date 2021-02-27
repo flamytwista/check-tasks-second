@@ -1,16 +1,29 @@
 <template>
   <container class="home">
-    <h1>This is an home page</h1>
-    <p :key="n" v-for="n in 40">
-      : {{ n }} This is an home page
-    </p>
+    <h1>Заметки</h1>
+    <btn
+      class="home__add-btn"
+      :to="{name: 'noteAdd'}"
+    >
+      Создать
+    </btn>
+    <NotesWrapper/>
   </container>
 </template>
 
 <script>
 
+import NotesWrapper from '@/components/NotesWrapper.vue'
+
 export default {
   name: 'home',
-  components: {}
+  components: { NotesWrapper },
 }
 </script>
+<style lang="scss" scoped>
+  .home {
+    .home__add-btn {
+      margin-bottom: $gap * 2;
+    }
+  }
+</style>

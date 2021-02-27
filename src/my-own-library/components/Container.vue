@@ -6,7 +6,8 @@
 
 <style scoped lang="scss">
 .container {
-  padding: 0 $gap;
+  padding-left: $gap;
+  padding-right: $gap;
   margin-right: auto;
   margin-left: auto;
 
@@ -17,15 +18,18 @@
     max-width: $bpMd;
   }
   @media (min-width: $bpMd) {
-    padding: 0 $gap * 2;
+    padding-left: $gap * 2;
+    padding-right: $gap * 2;
     max-width: $bpMd;
   }
   @media (min-width: $bpLg) {
-    padding: 0 $gap * 4;
+    padding-left: $gap * 4;
+    padding-right: $gap * 4;
     max-width: $bpLg;
   }
   @media (min-width: $bpXl) {
-    padding: 0 $gap * 8;
+    padding-left: $gap * 8;
+    padding-right: $gap * 8;
     max-width: $bpXl;
   }
 }
